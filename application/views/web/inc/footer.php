@@ -32,7 +32,14 @@
             <div class="col-md-6 col-lg-6 col-xl-3">
                 <div class="footer-item">
                     <h4 class="mb-4 text-white">Newsletter</h4>
-
+                    <form action="<?= base_url('admin/Pages/add_news_letter') ?>" method="POST">
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" aria-label="Enter email" aria-describedby="Enter email" required>
+                            <div class="input-group-append">
+                                <button id="news_letter" class="btn btn btn-success" type="submit">Submit</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -68,3 +75,22 @@
 
 <!-- Back to Top -->
 <a href="#" class="btn btn-primary btn-primary-outline-0 btn-md-square back-to-top"><i class="fa fa-arrow-up"></i></a>
+
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script>
+    var base_url = <?php base_url()?>
+     $("#news_letter").click(function() {
+      var email = $("#email").val()
+         
+        alert(email);
+       
+        $.ajax({
+            url: base_url+'news_letter',
+            type: 'GET',
+            data: email, 
+            success: function(response) {
+                $("#email").val("")
+            },
+        });
+    });
+</script> -->

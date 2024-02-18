@@ -152,7 +152,7 @@ foreach($our_team_board_of_trustees as $b_o_t){
                 </div>
             </div>
             <div class="col-xl-7">
-                <h5 class="text-uppercase text-primary">BOARD OF TRUSTEES</h5>
+                <h5 class="text-uppercase text-primary"><?php echo $b_o_t['type']?></h5>
                 <h1 class="mb-4"><?php echo $b_o_t['name']?></h1>
                 <p class="fs-5 mb-4"></p>
                 <div class="tab-class bg-secondary p-4">
@@ -225,21 +225,21 @@ foreach($our_team_board_of_trustees as $b_o_t){
         <div class="text-center mx-auto pb-5" style="max-width: 800px;">
             <h1 class="mb-0" style="color: #b3d335;">OTHERS TRUSTEES</h1>
         </div>
-        <div class="row g-4">
+            <div class="event-carousel owl-carousel">
             <?php foreach($our_team_trustees as $o_t_t){?>
-            <div class="col-lg-4">
+            <div class="event-item">
                 <div class="donation-item">
                     <img src="<?php echo base_url($o_t_t['img'])?>" class="img-fluid w-100" alt="Image">
                     <div class="donation-content d-flex flex-column">
-                        <h5 class="text-uppercase text-primary mb-4"><?php echo $o_t_t['name']?></h5>
+                        <h5 class="text-uppercase text-primary mb-4" ><?php echo $o_t_t['name']?></h5>
                         <p class="text-uppercase text-primary mb-4"><?php echo $o_t_t['type']?></p>
                         <p class="text-white mb-4"><?php echo $o_t_t['about_member']?></p>
-                        <div class="donation-btn d-flex align-items-center justify-content-start">
-                        </div>
+                        <div class="donation-btn d-flex align-items-center justify-content-start"></div>
                     </div>
                 </div>
             </div>
             <?php }?>
+        </div>
         </div>
     </div>
 </div>
